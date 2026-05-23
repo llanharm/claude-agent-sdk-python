@@ -2,6 +2,9 @@
 
 This is a fork of anthropics/claude-agent-sdk-python with additional
 features and improvements for agent-based workflows.
+
+Fork notes:
+- Added ConversationMemory to public API for easier stateful agent workflows
 """
 
 from __future__ import annotations
@@ -12,6 +15,7 @@ __license__ = "MIT"
 
 from claude_agent_sdk.client import ClaudeAgentClient
 from claude_agent_sdk.agent import Agent
+from claude_agent_sdk.memory import ConversationMemory
 from claude_agent_sdk.types import (
     AgentConfig,
     Message,
@@ -31,6 +35,7 @@ __all__ = [
     # Core classes
     "ClaudeAgentClient",
     "Agent",
+    "ConversationMemory",
     # Types
     "AgentConfig",
     "Message",
